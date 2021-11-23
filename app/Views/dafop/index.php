@@ -5,9 +5,9 @@
       <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <h1 class="text-center" >DAFTAR DOSEN</h1>
+          <h1 class="text-center" >DEFINISI OPERASIONAL INDIKATOR KINERJA UTAMA PTN</h1>
             <div class="section-header-breadcrumb">
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_dafdos">Tambah data</button>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_dafop">Tambah data</button>
             </div>
           </div>
 
@@ -17,7 +17,7 @@
               <div class="col-12">
                 <div class="card">
                   <div class="card-header">
-                    <h4>Tabel</h4>
+                    <h4>Berdasarkan Kepmendikbud Nomor 3 Tahun 2021</h4>
                   </div>
                   <div class="card-body">
                   <?php if (!empty(session()->getFlashdata('message'))) : ?>
@@ -55,7 +55,7 @@
                         <tbody>
                           <?php 
                           $no = 1;
-                            foreach($dafdos as $row) { ?>
+                            foreach($dafop as $row) { ?>
                               <tr>
                                   <td class="text-center"><?= $no++; ?></td>
                                   <td class="text-center"><?php echo $row['nama']; ?></td>
@@ -81,9 +81,9 @@
                                 </td>
                                   <td class="text-center">
                                       <div class="btn-group">
-                                      <a href="<?php echo base_url('/dafdos/edit/'.$row['id']); ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                                      <a href="<?php echo base_url('/dafop/edit/'.$row['id']); ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
                                           
-                                          <a href="<?php echo base_url('/dafdos/delete/'.$row['id']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus produk <?php echo $row['jenis']; ?> ini?')"><i class="fas fa-trash-alt"></i></a>
+                                          <a href="<?php echo base_url('/dafop/delete/'.$row['id']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus produk <?php echo $row['jenis']; ?> ini?')"><i class="fas fa-trash-alt"></i></a>
                                       </div>
                                   </td>
                               </tr>
@@ -101,8 +101,8 @@
     </div>
 
     <!-- Add Data -->
-    <form action="/dafdos/save" method="post">
-        <div class="modal fade" id="add_dafdos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form action="/dafop/save" method="post">
+        <div class="modal fade" id="add_dafop" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
