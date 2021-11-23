@@ -23,7 +23,7 @@
                   </ul>
              </li>
               <li><a href="<?= base_url('/')?>" class="nav-link"><i class="far fa-file-alt"></i><span>Definisi Operational</span></a></li>
-              <li><a href="<?= base_url('/')?>" class="nav-link"><i class="far fa-file-alt"></i><span>Daftar Dosen</span></a></li>
+              <li><a href="<?= base_url('/Dafdos')?>" class="nav-link"><i class="far fa-file-alt"></i><span>Daftar Dosen</span></a></li>
               <li><a href="<?= base_url('/iku1')?>" class="nav-link"><i class="far fa-file-alt"></i><span>IKU 1 (Lulusan)</span></a></li>
               <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>IKU 2</span></a>
