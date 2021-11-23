@@ -97,6 +97,15 @@
                         <input type="text" class="form-control" name="bukti_pddikti" value="<?php echo $iku_2_b['bukti_pddikti']; ?>">
                       </div>
                     </div>
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Status Validasi</label>
+                      <div class="col-sm-12 col-md-7">
+                        <input name="status_validasi" type="text"class="form-control" value="<?php echo $iku_2_b['status_validasi']; ?>">
+                            <option value="1">Ya</option>
+                            <option value="0">Tidak</option>
+                        </select>
+                      </div>
+                    </div>
                     
                     <div class="form-group row mb-4">
                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
