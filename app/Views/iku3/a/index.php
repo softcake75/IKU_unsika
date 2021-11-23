@@ -122,14 +122,22 @@
                 </div>
                 <div class="form-group">
                     <label>Nama Kegiatan</label>
-                    <input type="number" class="form-control" name="nama_kegiatan" placeholder="Masukan NIM">
+                    <input type="text" class="form-control" name="nama_kegiatan" placeholder="Masukan Nama Kegiatan">
+                </div>
+                <div class="form-group">
+                    <label>Tempat Kegiatan</label>
+                    <input type="text" class="form-control" name="tempat_kegiatan" placeholder="Masukan Prodi">
+                </div>
+                <div class="form-group">
+                    <label>Tahun Kegiatan</label>
+                    <input type="text" class="form-control" name="tahun_kegiatan" placeholder="Masukan Fakultas">
                 </div>
                 <div class="form-group">
                     <label>Tautan Data Dukung</label>
-                    <input type="text" class="form-control" name="tautan_data_dukung" placeholder="Masukan Prodi">
+                    <input type="text" class="form-control" name="tautan_data_dukung" placeholder="Masukan Fakultas">
                 </div>
                 <div class="form-group">
-                    <label>Fakultas</label>
+                    <label>Tautan Kontrak/Surat Keputusan</label>
                     <input type="text" class="form-control" name="tautan_sk" placeholder="Masukan Fakultas">
                 </div>
                 <div class="form-group">
