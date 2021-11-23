@@ -2,6 +2,7 @@
 <?php echo view('layout/navbar')?>
 <?php echo view('layout/sidebar')?>
 
+
       <div class="main-content">
         <section class="section">
           <div class="section-header">
@@ -10,7 +11,12 @@
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_iku1">Tambah data</button>
             </div>
           </div>
-
+          <div class="section-header">
+            <div class="form-group">
+                <h6>Total Jumlah Lulusan S1/D4/D3/D2 = <button class="card bg-danger">
+                  <?= $totalMhs?></button></h6>
+            </div>
+          </div>
           <div class="card">
           <div class="section-body">
             <div class="row">

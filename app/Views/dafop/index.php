@@ -36,19 +36,10 @@
                               <th class="text-center">
                                 No
                               </th>
-                              <th class="text-center">Nama</th>
-                              <th class="text-center">Tanggal Lahir</th>
-                              <th class="text-center">NIDN/NIDK</th>
-                              <th class="text-center">Status Kepegawaian</th>
-                              <th class="text-center">Prodi Mengajar</th>
-                              <th class="text-center">Status Keaktifan</th>
-                              <th class="text-center">Jenjang Pendidikan Teakhir</th>
-                              <th class="text-center">Jenis Kelamin</th>
-                              <th class="text-center">IPT - Perguruan Tinggi</th>
-                              <th class="text-center">Bidang Ilmu</th>
-                              <th class="text-center">Jabatan Fungsional</th>
-                              <th class="text-center">Kepakaran</th>
-                              <th class="text-center">Status Validasi</th>
+                              <th class="text-center">Indikator Kinerja Utama</th>
+                              <th class="text-center">Definisi Operasional</th>
+                              <th class="text-center">Catatan</th>
+                              <th class="text-center">Satuan</th>
                               <th class="text-center">Action</th>
                             </tr>
                         </thead>
@@ -58,27 +49,10 @@
                             foreach($dafop as $row) { ?>
                               <tr>
                                   <td class="text-center"><?= $no++; ?></td>
-                                  <td class="text-center"><?php echo $row['nama']; ?></td>
-                                  <td class="text-center"><?php echo $row['ttl']; ?></td>
-                                  <td class="text-center"><?php echo $row['nidn']; ?></td>
-                                  <td class="text-center"><?php echo $row['status_kepegawaian']; ?></td>
-                                  <td class="text-center"><?php echo $row['prodi_mengajar']; ?></td>
-                                  <td class="text-center"><?php echo $row['status_keaktifan']; ?></td>
-                                  <td class="text-center"><?php echo $row['pendidikan_terakhir']; ?></td>
-                                  <td class="text-center"><?php echo $row['jk']; ?></td>
-                                  <td class="text-center"><?php echo $row['pt']; ?></td>
-                                  <td class="text-center"><?php echo $row['bidang_ilmu']; ?></td>
-                                  <td class="text-center"><?php echo $row['jabatan']; ?></td>
-                                  <td class="text-center"><?php echo $row['kepakaran']; ?></td>
-                                  <td class="text-center">
-                                      <?php if ( $row['validasi'] == 1) {
-                                      echo '<button class="btn btn-icon btn-success"><i class="fas fa-fw-check"></i></button>';
-                                    } else if ( $row['validasi'] == 0) {
-                                        echo '<button class="btn btn-icon btn-danger"><i class="fas fa-fw-times"></i></button>';
-                                    } else {
-                                        echo'';
-                                    } ?>
-                                </td>
+                                  <td class="text-center"><?php echo $row['indikator']; ?></td>
+                                  <td class="text-center"><?php echo $row['definisi']; ?></td>
+                                  <td class="text-center"><?php echo $row['catatan']; ?></td>
+                                  <td class="text-center"><?php echo $row['satuan']; ?></td>
                                   <td class="text-center">
                                       <div class="btn-group">
                                       <a href="<?php echo base_url('/dafop/edit/'.$row['id']); ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
