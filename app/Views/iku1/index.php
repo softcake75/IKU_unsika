@@ -13,8 +13,7 @@
           </div>
           <div class="section-header">
             <div class="form-group">
-                <h6>Total Jumlah Lulusan S1/D4/D3/D2 = <button class="card bg-danger">
-                  <?= $totalMhs?></button></h6>
+                <h6>Total Jumlah Lulusan S1/D4/D3/D2 = <button class="card bg-danger"><?= $totalMhs?></button></h6>
             </div>
           </div>
           <div class="card">

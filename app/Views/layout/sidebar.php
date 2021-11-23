@@ -60,14 +60,11 @@
              <li><a href="<?= base_url('/iku7')?>" class="nav-link"><i class="far fa-file-alt"></i><span>IKU 7 (Pembelajaran)</span></a></li>
              <li><a href="<?= base_url('/iku8')?>" class="nav-link"><i class="far fa-file-alt"></i><span>IKU 8 (Akreditasi Internasional)</span></a></li>
 
-              <!-- <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li> -->
-          </ul>
-
-            <!-- <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+    <!-- <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
               <a href="<?= base_url('/mahasiswa/create'); ?>" class="btn btn-primary btn-lg btn-block btn-icon-split">
                 <i class="fas fa-rocket"></i> Pendaftaran
               </a>
               <?= csrf_field(); ?>
             </div> -->
-        </aside>
-      </div>
+  </aside>
+</div>
