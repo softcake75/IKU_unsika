@@ -41,4 +41,10 @@ class M_Iku1 extends Model
         $query = $this->db->table('iku_1')->delete(array('id' => $id));
         return $query;
     }
+
+    public function totalMhs()
+    {
+        $query =  $this->db->table('iku_1')->countAllResults(false);
+        return $query;
+    }
 }

@@ -17,8 +17,17 @@ class Iku1 extends BaseController
     {
         $iku1 = new M_Iku1();
         $data['iku_1'] = $this->iku1->findAll();
+        $data['totalMhs'] = $this->iku1->totalMhs();
         echo view('iku1/index', $data);
     }
+
+    // public function hitung()
+    // {
+    //     $iku1 = new M_Iku1();
+    //     $this->db->like('id', '0');
+    //     $this->db->from('iku1');
+    //     echo $this->db-countResultArray();
+    // }
 
     public function save()
     {
