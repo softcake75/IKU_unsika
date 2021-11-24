@@ -12,91 +12,82 @@
     </div>
 
     <div class="card">
-      <div class="section-body">
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <h4>Tabel IKU 1</h4>
-              </div>
-              <div class="card-body">
-                <?php if (!empty(session()->getFlashdata('message'))) : ?>
-                  <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <?php echo session()->getFlashdata('message'); ?>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                <?php endif; ?>
-                <div class="table-responsive">
-                  <!-- <table class="table table-striped" id="table-1"> -->
-                  <table id="mydata" class="table  table-bordered table-md" style="width:100%">
-                    <thead>
-                      <tr>
-                        <th class="text-center">
-                          No
-                        </th>
-                        <th class="text-center">Jenis</th>
-                        <th class="text-center">Nama</th>
-                        <th class="text-center">NIM</th>
-                        <th class="text-center">Jenjang</th>
-                        <th class="text-center">Prodi</th>
-                        <th class="text-center">Fakultas</th>
-                        <th class="text-center">No.Ijazah</th>
-                        <th class="text-center">Masa Tunggu</th>
-                        <th class="text-center">Nama Perusahaan</th>
-                        <th class="text-center">Lokasi Perusahaan</th>
-                        <th class="text-center">Pendapatan</th>
-                        <th class="text-center">Lanjut Studi</th>
-                        <th class="text-center">Tautan Bukti</th>
-                        <th class="text-center">Status Validasi</th>
-                        <th class="text-center">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <?php
-                      $no = 1;
-                      foreach ($iku_1 as $row) { ?>
-                        <tr>
-                          <td class="text-center"><?= $no++; ?></td>
-                          <td class="text-center"><?php echo $row['jenis']; ?></td>
-                          <td class="text-center"><?php echo $row['nama']; ?></td>
-                          <td class="text-center"><?php echo $row['nim']; ?></td>
-                          <td class="text-center"><?php echo $row['jenjang']; ?></td>
-                          <td class="text-center"><?php echo $row['prodi']; ?></td>
-                          <td class="text-center"><?php echo $row['fakultas']; ?></td>
-                          <td class="text-center"><?php echo $row['no_ijazah']; ?></td>
-                          <td class="text-center"><?php echo $row['masa_tunggu']; ?></td>
-                          <td class="text-center"><?php echo $row['nama_perusahaan']; ?></td>
-                          <td class="text-center"><?php echo $row['lokasi_perusahaan']; ?></td>
-                          <td class="text-center"><?php echo $row['pendapatan']; ?></td>
-                          <td class="text-center"><?php echo $row['lanjut_studi']; ?></td>
-                          <td class="text-center"><?php echo $row['tautan_bukti']; ?></td>
-                          <td class="text-center">
-                            <?php if ($row['status_validasi'] == 1) {
-                              echo '<button class="btn btn-icon btn-success"><i class="fas fa-fw fa-check"></i></button>';
-                            } else if ($row['status_validasi'] == 0) {
-                              echo '<button class="btn btn-icon btn-danger"><i class="fas fa-fw fa-times"></i></button>';
-                            } else {
-                              echo '';
-                            } ?>
-                          </td>
-                          <td class="text-center">
-                            <div class="btn-group">
-                              <a href="<?php echo base_url('/iku1/edit/' . $row['id']); ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
-
-                              <a href="<?php echo base_url('/iku1/delete/' . $row['id']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus produk <?php echo $row['jenis']; ?> ini?')"><i class="fas fa-trash-alt"></i></a>
-                            </div>
-                          </td>
-                        </tr>
-                      <?php } ?>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
+      <div class="card-header">
+        <h4>Tabel IKU 1</h4>
+      </div>
+      <div class="card-body">
+        <?php if (!empty(session()->getFlashdata('message'))) : ?>
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <?php echo session()->getFlashdata('message'); ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
+        <?php endif; ?>
+        <div class="table-responsive">
+          <table id="mydata" class="table  table-bordered table-md" style="width:100%">
+            <thead>
+              <tr>
+                <th class="text-center">
+                  No
+                </th>
+                <th class="text-center">Jenis</th>
+                <th class="text-center">Nama</th>
+                <th class="text-center">NIM</th>
+                <th class="text-center">Jenjang</th>
+                <th class="text-center">Prodi</th>
+                <th class="text-center">Fakultas</th>
+                <th class="text-center">No.Ijazah</th>
+                <th class="text-center">Masa Tunggu</th>
+                <th class="text-center">Nama Perusahaan</th>
+                <th class="text-center">Lokasi Perusahaan</th>
+                <th class="text-center">Pendapatan</th>
+                <th class="text-center">Lanjut Studi</th>
+                <th class="text-center">Tautan Bukti</th>
+                <th class="text-center">Status Validasi</th>
+                <th class="text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              $no = 1;
+              foreach ($iku_1 as $row) { ?>
+                <tr>
+                  <td class="text-center"><?= $no++; ?></td>
+                  <td class="text-center"><?php echo $row['jenis']; ?></td>
+                  <td class="text-center"><?php echo $row['nama']; ?></td>
+                  <td class="text-center"><?php echo $row['nim']; ?></td>
+                  <td class="text-center"><?php echo $row['jenjang']; ?></td>
+                  <td class="text-center"><?php echo $row['prodi']; ?></td>
+                  <td class="text-center"><?php echo $row['fakultas']; ?></td>
+                  <td class="text-center"><?php echo $row['no_ijazah']; ?></td>
+                  <td class="text-center"><?php echo $row['masa_tunggu']; ?></td>
+                  <td class="text-center"><?php echo $row['nama_perusahaan']; ?></td>
+                  <td class="text-center"><?php echo $row['lokasi_perusahaan']; ?></td>
+                  <td class="text-center"><?php echo $row['pendapatan']; ?></td>
+                  <td class="text-center"><?php echo $row['lanjut_studi']; ?></td>
+                  <td class="text-center"><?php echo $row['tautan_bukti']; ?></td>
+                  <td class="text-center">
+                    <?php if ($row['status_validasi'] == 1) {
+                      echo '<button class="btn btn-icon btn-success"><i class="fas fa-fw fa-check"></i></button>';
+                    } else if ($row['status_validasi'] == 0) {
+                      echo '<button class="btn btn-icon btn-danger"><i class="fas fa-fw fa-times"></i></button>';
+                    } else {
+                      echo '';
+                    } ?>
+                  </td>
+                  <td class="text-center">
+                    <div class="btn-group">
+                      <a href="<?php echo base_url('/iku1/edit/' . $row['id']); ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                      <a href="<?php echo base_url('/iku1/delete/' . $row['id']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus produk <?php echo $row['jenis']; ?> ini?')"><i class="fas fa-trash-alt"></i></a>
+                    </div>
+                  </td>
+                </tr>
+              <?php } ?>
+            </tbody>
+          </table>
         </div>
+
       </div>
   </section>
 </div>
