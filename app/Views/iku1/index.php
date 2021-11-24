@@ -35,7 +35,7 @@
                   <?php endif; ?>
                     <div class="table-responsive">
                       <!-- <table class="table table-striped" id="table-1"> -->
-                      <table id="mydata" class="table  table-bordered table-md" style="width:100%">
+                      <table id="mydata" class="table table-bordered table-md nowrap" width=100%>
                         <thead>
                             <tr>
                               <th class="text-center">
@@ -105,7 +105,7 @@
           </div>
         </section>
       </div>
-    </div>
+   
 
     <!-- Add Data -->
     <form action="/iku1/save" method="post">
@@ -199,7 +199,21 @@
 
 <script>
 $(document).ready( function () {
-    $('#mydata').DataTable();
+    $('#mydata').DataTable({
+      responsive: {
+        details: {
+                display: $.fn.dataTable.Responsive.display.modal( {
+                    header: function ( row ) {
+                        var data = row.data();
+                        return 'Details for '+data[0]+' '+data[2];
+                    }
+                } ),
+                renderer: $.fn.dataTable.Responsive.renderer.tableAll( {
+                    tableClass: 'table'
+                } )
+            }
+      }
+    });
 } );
 </script>
 
@@ -244,20 +258,4 @@ $(document).ready(function() {
   });
 });
 
-<!-- <script type="text/javascript">
-        $(document).ready(function() {
-            var table = $('#user-table').DataTable({
-                "processing": true,
-                "serverSide": true,
-                "order": [],
-                "ajax": {
-                    "url": "<?php echo site_url('Utama/ajaxList') ?>",
-                    "type": "POST"
-                },
-                "columnDefs": [{
-                    "targets": [],
-                    "orderable": false,
-                }, ],
-            });
-        });
-</script> -->
+ </script>
