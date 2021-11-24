@@ -69,10 +69,10 @@
                   <td class="text-center"><?php echo $row['tautan_data_lainnya']; ?></td>
                   <td class="text-center"><?php echo $row['tautan_bukti_pddikti']; ?></td>
                   <td class="text-center">
-                    <?php if (session()->get('status_validasi') == 1) {
-                      echo ' <button class="btn btn-icon btn-success"><i class="fas fa-check"></i></button>';
-                    } else if (session()->get('status_validasi') == 0) {
-                      echo '<button class="btn btn-icon btn-danger"><i class="fas fa-times"></i></button>';
+                    <?php if ($row['status_validasi'] == 1) {
+                      echo ' <button class="btn btn-icon btn-success"><i class="fas fa-fw fa-check"></i></button>';
+                    } else if ($row['status_validasi'] == 0) {
+                      echo '<button class="btn btn-icon btn-danger"><i class="fas fa-fw fa-times"></i></button>';
                     } else {
                       echo '';
                     } ?>
@@ -96,7 +96,7 @@
 <!-- Add Data -->
 <form action="/iku2_a/save" method="post">
   <div class="modal fade" id="add_iku2_a" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Tambah data IKU 2 (Pengalaman Diluar Kampus)</h5>
@@ -105,69 +105,79 @@
           </button>
         </div>
         <div class="modal-body">
-          <div class="form-group">
-            <label>Jenis Kegiatan</label>
-            <input type="text" class="form-control" name="jenis_kegiatan" placeholder="Masukan Jenis Kegiatan">
-          </div>
-          <div class="form-group">
-            <label>Nama</label>
-            <input type="text" class="form-control" name="nama" placeholder="Masukan Nama">
-          </div>
-          <div class="form-group">
-            <label>NIM</label>
-            <input type="number" class="form-control" name="nim" placeholder="Masukan NIM">
-          </div>
-          <div class="form-group">
-            <label>Prodi</label>
-            <input type="text" class="form-control" name="prodi" placeholder="Masukan Prodi">
-          </div>
-          <div class="form-group">
-            <label>Fakultas</label>
-            <input type="text" class="form-control" name="fakultas" placeholder="Masukan Fakultas">
-          </div>
-          <div class="form-group">
-            <label>Program/Kegiatan Merdeka Belajar</label>
-            <input type="text" class="form-control" name="kegiatan_merdeka_belajar" placeholder="Masukan Program/Kegiatan">
-          </div>
-          <div class="form-group">
-            <label>Jumlah SKS yang diakui</label>
-            <input type="number" class="form-control" name="sks_diakui" placeholder="Masukan Jumlah SKS">
-          </div>
-          <div class="form-group">
-            <label>Dosen Pembimbing</label>
-            <input type="text" class="form-control" name="dosen_pembimbing" placeholder="Masukan Dosen Pembimbing">
-          </div>
-          <div class="form-group">
-            <label>Tautan SK Rektor / Pejabat PTN</label>
-            <input type="text" class="form-control" name="tautan_sk_rektor" placeholder="Masukan Tautan SK Rektor">
-          </div>
-          <div class="form-group">
-            <label>Tautan SK Konversi</label>
-            <input type="text" class="form-control" name="tautan_sk_konversi" placeholder="Masukan Tautan SK Konversi">
-          </div>
-          <div class="form-group">
-            <label>Tautan SK / Panduan Kegiatan</label>
-            <input type="text" class="form-control" name="tautan_panduan_kegiatan" placeholder="Masukan Tautan SK">
-          </div>
-          <div class="form-group">
-            <label>Tautan Data Dukung Lainnya</label>
-            <input type="text" class="form-control" name="tautan_data_lainnya" placeholder="Masukan Tautan data Dukung">
-          </div>
-          <div class="form-group">
-            <label>Tautan Bukti Isian di PDDIKTI </label>
-            <input type="text" class="form-control" name="tautan_bukti_pddikti" placeholder="Masukan Tautan Bukti PDDIKTI">
-          </div>
-          <div class="form-group">
-            <label>Status Validasi</label><br>
-            <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="ya" name="status_validasi" class="custom-control-input" value="1">
-              <label class="custom-control-label" for="ya">Ya</label>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label>Jenis Kegiatan</label>
+                  <input type="text" class="form-control" name="jenis_kegiatan" placeholder="Masukan Jenis Kegiatan">
+                </div>
+                <div class="form-group">
+                  <label>Nama</label>
+                  <input type="text" class="form-control" name="nama" placeholder="Masukan Nama">
+                </div>
+                <div class="form-group">
+                  <label>NIM</label>
+                  <input type="number" class="form-control" name="nim" placeholder="Masukan NIM">
+                </div>
+                <div class="form-group">
+                  <label>Prodi</label>
+                  <input type="text" class="form-control" name="prodi" placeholder="Masukan Prodi">
+                </div>
+                <div class="form-group">
+                  <label>Fakultas</label>
+                  <input type="text" class="form-control" name="fakultas" placeholder="Masukan Fakultas">
+                </div>
+                <div class="form-group">
+                  <label>Program/Kegiatan Merdeka Belajar</label>
+                  <input type="text" class="form-control" name="kegiatan_merdeka_belajar" placeholder="Masukan Program/Kegiatan">
+                </div>
+                <div class="form-group">
+                  <label>Jumlah SKS yang diakui</label>
+                  <input type="number" class="form-control" name="sks_diakui" placeholder="Masukan Jumlah SKS">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label>Dosen Pembimbing</label>
+                  <input type="text" class="form-control" name="dosen_pembimbing" placeholder="Masukan Dosen Pembimbing">
+                </div>
+                <div class="form-group">
+                  <label>Tautan SK Rektor / Pejabat PTN</label>
+                  <input type="text" class="form-control" name="tautan_sk_rektor" placeholder="Masukan Tautan SK Rektor">
+                </div>
+                <div class="form-group">
+                  <label>Tautan SK Konversi</label>
+                  <input type="text" class="form-control" name="tautan_sk_konversi" placeholder="Masukan Tautan SK Konversi">
+                </div>
+                <div class="form-group">
+                  <label>Tautan SK / Panduan Kegiatan</label>
+                  <input type="text" class="form-control" name="tautan_panduan_kegiatan" placeholder="Masukan Tautan SK">
+                </div>
+                <div class="form-group">
+                  <label>Tautan Data Dukung Lainnya</label>
+                  <input type="text" class="form-control" name="tautan_data_lainnya" placeholder="Masukan Tautan data Dukung">
+                </div>
+                <div class="form-group">
+                  <label>Tautan Bukti Isian di PDDIKTI </label>
+                  <input type="text" class="form-control" name="tautan_bukti_pddikti" placeholder="Masukan Tautan Bukti PDDIKTI">
+                </div>
+                <div class="form-group">
+                  <label>Status Validasi</label><br>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="ya" name="status_validasi" class="custom-control-input" value="1">
+                    <label class="custom-control-label" for="ya">Ya</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="tidak" name="status_validasi" class="custom-control-input" value="0">
+                    <label class="custom-control-label" for="tidak">Tidak</label>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="tidak" name="status_validasi" class="custom-control-input" value="0">
-              <label class="custom-control-label" for="tidak">Tidak</label>
-            </div>
           </div>
+
+
 
         </div>
         <div class="modal-footer">

@@ -177,11 +177,8 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
-
-
 
         </div>
         <div class="modal-footer">
@@ -242,22 +239,3 @@
       }
     });
   });
-
-  <
-  !-- < script type = "text/javascript" >
-    $(document).ready(function() {
-      var table = $('#user-table').DataTable({
-        "processing": true,
-        "serverSide": true,
-        "order": [],
-        "ajax": {
-          "url": "<?php echo site_url('Utama/ajaxList') ?>",
-          "type": "POST"
-        },
-        "columnDefs": [{
-          "targets": [],
-          "orderable": false,
-        }, ],
-      });
-    }); <
-  /> -->
