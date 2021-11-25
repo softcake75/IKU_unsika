@@ -11,9 +11,6 @@ class UserModel extends Model
     public $builder;
 
     protected $table = "user";
-    // protected $primaryKey = "id_skpd";
-    // protected $returnType = "object";
-    // protected $useTimestamps = true;
     protected $allowedFields = ['id_user', 'nama_user', 'password', 'fakultas', 'level'];
 
     public function __construct()
