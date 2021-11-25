@@ -34,7 +34,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/iku1', 'Iku1::index');
-$routes->get('/Monitoring', 'Monitoring::Dashboard',['filter' => 'auth']);
+$routes->get('user', 'UserController::index');
 
 /*
  * --------------------------------------------------------------------
