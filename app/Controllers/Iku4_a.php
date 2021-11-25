@@ -40,7 +40,7 @@ class iku4_a extends BaseController
     {
         $iku4_a = new M_iku4_a();
         $data['iku4_a'] = $this->iku4_a->get_iku4_a($id);
-        echo view('iku4_a/edit', $data);
+        echo view('iku4/a/edit', $data);
     }
 
     public function update($id)

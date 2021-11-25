@@ -44,7 +44,7 @@ class iku5_b extends BaseController
     {
         $iku5_b = new M_iku5_b();
         $data['iku5_b'] = $this->iku5_b->get_iku5_b($id);
-        echo view('iku5_b/edit', $data);
+        echo view('iku5/b/edit', $data);
     }
 
     public function update($id)
