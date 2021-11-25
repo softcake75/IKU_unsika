@@ -10,7 +10,7 @@ class M_iku5_a extends Model
     public $db;
     public $builder;
 
-    public function get_iku3_a($id = false)
+    public function get_iku5_a($id = false)
     {
         if($id === false){
             return $this->table('iku_5_a')
@@ -24,19 +24,19 @@ class M_iku5_a extends Model
         }  
     }
 
-    public function save_iku3_a($data)
+    public function save_iku5_a($data)
     {
         $query = $this->db->table('iku_5_a')->insert($data);
         return $query;
     }
 
-    public function update_iku3_a($data, $id)
+    public function update_iku5_a($data, $id)
     {
         $query = $this->db->table('iku_5_a')->update($data, array('id' => $id));
         return $query;
     }
 
-    public function delete_iku3_a($id)
+    public function delete_iku5_a($id)
     {
         $query = $this->db->table('iku_5_a')->delete(array('id' => $id));
         return $query;

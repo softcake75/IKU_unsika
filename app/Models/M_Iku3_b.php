@@ -10,7 +10,7 @@ class M_iku3_b extends Model
     public $db;
     public $builder;
 
-    public function get_iku3_a($id = false)
+    public function get_iku3_b($id = false)
     {
         if($id === false){
             return $this->table('iku_3_b')
@@ -24,19 +24,19 @@ class M_iku3_b extends Model
         }  
     }
 
-    public function save_iku3_a($data)
+    public function save_iku3_b($data)
     {
         $query = $this->db->table('iku_3_b')->insert($data);
         return $query;
     }
 
-    public function update_iku3_a($data, $id)
+    public function update_iku3_b($data, $id)
     {
         $query = $this->db->table('iku_3_b')->update($data, array('id' => $id));
         return $query;
     }
 
-    public function delete_iku3_a($id)
+    public function delete_iku3_b($id)
     {
         $query = $this->db->table('iku_3_b')->delete(array('id' => $id));
         return $query;

@@ -144,9 +144,9 @@
               <div class="card">
                 <div class="card-header">
                   <h4>Invoices</h4>
-                  <div class="card-header-action">
+                  <!-- <div class="card-header-action">
                     <a href="#" class="btn btn-danger">View More <i class="fas fa-chevron-right"></i></a>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="card-body p-0">
                   <div class="table-responsive table-invoice">
@@ -214,8 +214,8 @@
                   <div class="card-icon">
                     <i class="far fa-question-circle"></i>
                   </div>
-                  <h4>14</h4>
-                  <div class="card-description">Customers need help</div>
+                  <h4>News !!</h4>
+                  <div class="card-description">Berita Seputar IKU</div>
                 </div>
                 <div class="card-body p-0">
                   <div class="tickets-list">
