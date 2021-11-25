@@ -24,7 +24,6 @@
                 <option value="Studi Atau Proyek Independen" <?php if ($iku_2_a['jenis_kegiatan'] == 'Studi Atau Proyek Independen') echo 'selected' ?>>Studi Atau Proyek Independen</option>
                 <option value="Proyek Kemanusiaan" <?php if ($iku_2_a['jenis_kegiatan'] == 'Proyek Kemanusiaan') echo 'selected' ?>>Proyek Kemanusiaan</option>
               </select>
-
             </div>
           </div>
           <div class="form-group row mb-4">
@@ -103,11 +102,11 @@
             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Status Validasi</label>
             <div class="col-sm-12 col-md-7">
               <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="ya" name="status_validasi" class="custom-control-input" <?php if ($iku_2_a['status_validasi'] == '1') echo 'checked' ?>>
+                <input type="radio" id="ya" name="status_validasi" value="1" class="custom-control-input" <?php if ($iku_2_a['status_validasi'] == '1') echo 'checked' ?>>
                 <label class="custom-control-label" for="ya">Ya</label>
               </div>
               <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="tidak" name="status_validasi" class="custom-control-input" <?php if ($iku_2_a['status_validasi'] == '0') echo 'checked' ?>>
+                <input type="radio" id="tidak" name="status_validasi" value="0" class="custom-control-input" <?php if ($iku_2_a['status_validasi'] == '0') echo 'checked' ?>>
                 <label class="custom-control-label" for="tidak">Tidak</label>
               </div>
             </div>

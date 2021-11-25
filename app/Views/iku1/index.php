@@ -10,9 +10,18 @@
         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_iku1">Tambah data</button>
       </div>
     </div>
-    <div class="section-header">
-      <div class="form-group">
-        <h6>Total Jumlah Lulusan S1/D4/D3/D2 = <button class="card bg-danger"><?= $totalMhs ?></button></h6>
+
+    <div class="card card-statistic-2">
+      <div class="card-icon shadow-primary bg-primary">
+        <i class="fas fa-user-graduate"></i>
+      </div>
+      <div class="card-wrap">
+        <div class="card-header">
+          <h4>Total Lulusan S1/D4/D3/D2</h4>
+        </div>
+        <div class="card-body">
+          <?= $totalMhs ?>
+        </div>
       </div>
     </div>
 
@@ -208,41 +217,40 @@
 <script type="text/javascript" language="javascript">
   $(document).ready(function() {
     var dataTable = $('#tabel_serverside').DataTable({
-        "processing": true,
-        "oLanguage": {
-          "sLengthMenu": "Tampilkan _MENU_ data per halaman",
-          "sSearch": "Pencarian: ",
-          "sZeroRecords": "Maaf, tidak ada data yang ditemukan",
-          "sInfo": "Menampilkan _START_ s/d _END_ dari _TOTAL_ data",
-          "sInfoEmpty": "Menampilkan 0 s/d 0 dari 0 data",
-          "sInfoFiltered": "(di filter dari _MAX_ total data)",
-          "oPaginate": {
-            "sFirst": "<<",
-            "sLast": ">>",
-            "sPrevious": "<",
-            "sNext": ">"
-          }
-        },
-        columnDefs: [{
-          targets: [0],
-          orderable: false
-        }],
-        "ordering": true,
-        "info": true,
-        "serverSide": true,
-        "stateSave": true,
-        "scrollX": true,
-        "ajax": {
-          url: "<?php echo base_url("Utama/listdata"); ?>", // json datasource
-          type: "post", // method  , by default get
-          error: function() { // error handling
-            $(".tabel_serverside-error").html("");
-            $("#tabel_serverside").append('<tbody class="tabel_serverside-error"><tr><th colspan="3">Data Tidak Ditemukan di Server</th></tr></tbody>');
-            $("#tabel_serverside_processing").css("display", "none");
-
-          }
+      "processing": true,
+      "oLanguage": {
+        "sLengthMenu": "Tampilkan _MENU_ data per halaman",
+        "sSearch": "Pencarian: ",
+        "sZeroRecords": "Maaf, tidak ada data yang ditemukan",
+        "sInfo": "Menampilkan _START_ s/d _END_ dari _TOTAL_ data",
+        "sInfoEmpty": "Menampilkan 0 s/d 0 dari 0 data",
+        "sInfoFiltered": "(di filter dari _MAX_ total data)",
+        "oPaginate": {
+          "sFirst": "<<",
+          "sLast": ">>",
+          "sPrevious": "<",
+          "sNext": ">"
         }
+      },
+      columnDefs: [{
+        targets: [0],
+        orderable: false
+      }],
+      "ordering": true,
+      "info": true,
+      "serverSide": true,
+      "stateSave": true,
+      "scrollX": true,
+      "ajax": {
+        url: "<?php echo base_url("Utama/listdata"); ?>", // json datasource
+        type: "post", // method  , by default get
+        error: function() { // error handling
+          $(".tabel_serverside-error").html("");
+          $("#tabel_serverside").append('<tbody class="tabel_serverside-error"><tr><th colspan="3">Data Tidak Ditemukan di Server</th></tr></tbody>');
+          $("#tabel_serverside_processing").css("display", "none");
 
+        }
       }
     });
   });
+</script>
