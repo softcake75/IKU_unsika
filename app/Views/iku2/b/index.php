@@ -7,7 +7,22 @@
     <div class="section-header">
       <h1>IKU 2 (Prestasi)</h1>
       <div class="section-header-breadcrumb">
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_iku2_a">Tambah data</button>
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_iku2_b">Tambah data</button>
+      </div>
+    </div>
+
+    <div class="card card-statistic-2">
+      <div class="card-icon shadow-primary bg-primary">
+        <i class="fas fa-user-graduate"></i>
+      </div>
+      <div class="card-wrap">
+        <div class="card-header">
+          <h4>Total Mahasiswa</h4>
+        </div>
+        <div class="card-body">
+          <?= '10' //$totalMhs 
+          ?>
+        </div>
       </div>
     </div>
 
@@ -77,8 +92,8 @@
                   </td>
                   <td class="text-center">
                     <div class="btn-group">
-                      <a href="<?php echo base_url('/iku2_a/edit/' . $row['id']); ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
-                      <a href="<?php echo base_url('/iku2_a/delete/' . $row['id']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus produk <?php echo $row['jenis_kegiatan']; ?> ini?')"><i class="fas fa-trash-alt"></i></a>
+                      <a href="<?php echo base_url('/iku2_b/edit/' . $row['id']); ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                      <a href="<?php echo base_url('/iku2_b/delete/' . $row['id']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus <?php echo $row['nama']; ?>?')"><i class="fas fa-trash-alt"></i></a>
                     </div>
                   </td>
                 </tr>
@@ -92,8 +107,8 @@
 </div>
 
 <!-- Add Data -->
-<form action="/iku2_a/save" method="post">
-  <div class="modal fade" id="add_iku2_a" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<form action="/iku2_b/save" method="post">
+  <div class="modal fade" id="add_iku2_b" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -124,11 +139,11 @@
                 </div>
                 <div class="form-group">
                   <label>Nama Kompetisi/Lomba</label>
-                  <input type="text" class="form-control" name="nama_lomba" placeholder="Masukan Nama Kompetensi/Lomba">
+                  <input type="text" class="form-control" name="nama_lomba" placeholder="Masukan Nama Kompetisi/Lomba">
                 </div>
                 <div class="form-group">
                   <label>Tingkat Kompetisi/Lomba</label>
-                  <input type="number" class="form-control" name="tingkat_lomba" placeholder="Masukan Tingkat Kompetensi/Lomba">
+                  <input type="text" class="form-control" name="tingkat_lomba" placeholder="Masukan Tingkat Kompetisi/Lomba">
                 </div>
                 <div class="form-group">
                   <label>Penyelenggara</label>
@@ -142,11 +157,11 @@
                 </div>
                 <div class="form-group">
                   <label>Dosen Pembimbing</label>
-                  <input type="text" class="form-control" name="dospem" placeholder="Masukan Tautan SK Dosen Pembimbing">
+                  <input type="text" class="form-control" name="dospem" placeholder="Masukan Dosen Pembimbing">
                 </div>
                 <div class="form-group">
                   <label>Tautan SK Dosen Pembimbing</label>
-                  <input type="text" class="form-control" name="sk_dospem" placeholder="Masukan Tautan SK Konversi">
+                  <input type="text" class="form-control" name="sk_dospem" placeholder="Masukan Tautan SK Dosen Pembimbing">
                 </div>
                 <div class="form-group">
                   <label>Tautan Sertifikat/Piagam/Bukti Prestasi</label>
@@ -185,7 +200,21 @@
 
 <script>
   $(document).ready(function() {
-    $('#mydata').DataTable();
+    $('#mydata').DataTable({
+      responsive: {
+        details: {
+          display: $.fn.dataTable.Responsive.display.modal({
+            header: function(row) {
+              var data = row.data();
+              return 'Details for ' + data[0] + ' ' + data[2];
+            }
+          }),
+          renderer: $.fn.dataTable.Responsive.renderer.tableAll({
+            tableClass: 'table'
+          })
+        }
+      }
+    });
   });
 </script>
 
@@ -229,3 +258,4 @@
       }
     });
   });
+</script>

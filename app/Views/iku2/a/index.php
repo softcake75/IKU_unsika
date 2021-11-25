@@ -11,6 +11,21 @@
       </div>
     </div>
 
+    <div class="card card-statistic-2">
+      <div class="card-icon shadow-primary bg-primary">
+        <i class="fas fa-user-graduate"></i>
+      </div>
+      <div class="card-wrap">
+        <div class="card-header">
+          <h4>Total Mahasiswa</h4>
+        </div>
+        <div class="card-body">
+          <?= '10' //$totalMhs 
+          ?>
+        </div>
+      </div>
+    </div>
+
     <div class="card">
       <div class="card-header">
         <h4>Tabel IKU 2</h4>
@@ -110,7 +125,16 @@
               <div class="col-lg-6">
                 <div class="form-group">
                   <label>Jenis Kegiatan</label>
-                  <input type="text" class="form-control" name="jenis_kegiatan" placeholder="Masukan Jenis Kegiatan">
+                  <select type="text" class="form-control" name="jenis_kegiatan">
+                    <option value="Magang atau Praktik Kerja">Magang atau Praktik Kerja</option>
+                    <option value="Proyek di Desa">Proyek di Desa</option>
+                    <option value="Mengajar di Sekolah">Mengajar di Sekolah</option>
+                    <option value="Pertukaran Pelajar">Pertukaran Pelajar</option>
+                    <option value="Penelitian atau Riset">Penelitian atau Riset</option>
+                    <option value="Kegiatan Wirausaha">Kegiatan Wirausaha</option>
+                    <option value="Studi atau Proyek Independen">Studi atau Proyek Independen</option>
+                    <option value="Proyek Kemanusiaan">Proyek Kemanusiaan</option>
+                  </select>
                 </div>
                 <div class="form-group">
                   <label>Nama</label>
@@ -192,9 +216,24 @@
 
 <?php echo view('layout/footer') ?>
 
+
 <script>
   $(document).ready(function() {
-    $('#mydata').DataTable();
+    $('#mydata').DataTable({
+      responsive: {
+        details: {
+          display: $.fn.dataTable.Responsive.display.modal({
+            header: function(row) {
+              var data = row.data();
+              return 'Details for ' + data[0] + ' ' + data[2];
+            }
+          }),
+          renderer: $.fn.dataTable.Responsive.renderer.tableAll({
+            tableClass: 'table'
+          })
+        }
+      }
+    });
   });
 </script>
 
@@ -238,3 +277,4 @@
       }
     });
   });
+</script>

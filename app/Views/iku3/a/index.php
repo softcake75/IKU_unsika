@@ -11,6 +11,21 @@
       </div>
     </div>
 
+    <div class="card card-statistic-2">
+      <div class="card-icon shadow-primary bg-primary">
+        <i class="fas fa-user-graduate"></i>
+      </div>
+      <div class="card-wrap">
+        <div class="card-header">
+          <h4>Total Mahasiswa</h4>
+        </div>
+        <div class="card-body">
+          <?= '10' //$totalMhs 
+          ?>
+        </div>
+      </div>
+    </div>
+
     <div class="card">
       <div class="card-header">
         <h4>Tabel IKU 3</h4>
@@ -180,7 +195,21 @@
 
 <script>
   $(document).ready(function() {
-    $('#mydata').DataTable();
+    $('#mydata').DataTable({
+      responsive: {
+        details: {
+          display: $.fn.dataTable.Responsive.display.modal({
+            header: function(row) {
+              var data = row.data();
+              return 'Details for ' + data[0] + ' ' + data[2];
+            }
+          }),
+          renderer: $.fn.dataTable.Responsive.renderer.tableAll({
+            tableClass: 'table'
+          })
+        }
+      }
+    });
   });
 </script>
 
@@ -224,3 +253,4 @@
       }
     });
   });
+</script>
