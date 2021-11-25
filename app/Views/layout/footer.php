@@ -36,6 +36,7 @@
 <script src="<?php echo base_url('assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js') ?>"></script>
 <script src="<?php echo base_url('assets/modules/select2/dist/js/select2.full.min.js') ?>"></script>
 <script src="<?php echo base_url('assets/modules/jquery-selectric/jquery.selectric.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/modules/chart.min.js') ?>"></script>
 
 <!-- Template JS File -->
 <script src="<?php echo base_url('assets/js/scripts.js') ?>"></script>

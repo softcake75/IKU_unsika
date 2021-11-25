@@ -8,7 +8,7 @@
           </div>
           <ul class="sidebar-menu">
               <li class="menu-header">Dashboard</li>
-              <li><a href="<?= base_url('/')?>" class="nav-link"><i class="far fa-file-alt"></i><span>Monitoring</span></a></li>
+              <li><a href="<?= base_url('/Monitoring')?>" class="nav-link"><i class="far fa-file-alt"></i><span>Monitoring</span></a></li>
               <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Kertas Kerja</span></a>
                   <ul class="dropdown-menu">
