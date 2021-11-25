@@ -6,7 +6,6 @@ use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
 use CodeIgniter\Filters\Honeypot;
-use CodeIgniter\Filters\Auth;
 
 class Filters extends BaseConfig
 {
@@ -17,11 +16,10 @@ class Filters extends BaseConfig
 	 * @var array
 	 */
 	public $aliases = [
-		'csrf'     => CodeIgniter\Filters\CSRF::class,
-		'toolbar'  => CodeIgniter\Filters\DebugToolbar::class,
-		'honeypot' => CodeIgniter\Filters\Honeypot::class,
-		'auth'     => App\Filters\Auth::class,
-  ];
+		'csrf'     => CSRF::class,
+		'toolbar'  => DebugToolbar::class,
+		'honeypot' => Honeypot::class,
+	];
 
 	/**
 	 * List of filter aliases that are always
