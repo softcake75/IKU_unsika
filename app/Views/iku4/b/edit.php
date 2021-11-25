@@ -38,7 +38,7 @@
           <div class="form-group row mb-4">
             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tautan Sertifikasi</label>
             <div class="col-sm-12 col-md-7">
-              <input type="text" class="form-control" name="tautan_sertifikasi" value="<?php echo $iku4_b['tautan_sertifikasi']; ?>">
+              <input type="text" class="form-control" name="tautan_sertifikat" value="<?php echo $iku4_b['tautan_sertifikat']; ?>">
             </div>
           </div>
           <div class="form-group row mb-4">

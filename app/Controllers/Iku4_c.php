@@ -25,10 +25,10 @@ class iku4_c extends BaseController
         $iku4_c = new M_iku4_c();
         $data = array(
             'id' => $this->request->getPost('id'),
-            'jenis_pengalaman' => $this->request->getPost('id'),
-            'nama' => $this->request->getPost('id'),
-            'nama_instansi' => $this->request->getPost('id'),
-            'tautan_pengalaman_kerja' => $this->request->getPost('id'),
+            'jenis_pengalaman' => $this->request->getPost('jenis_pengalaman'),
+            'nama' => $this->request->getPost('nama'),
+            'nama_instansi' => $this->request->getPost('nama_instansi'),
+            'tautan_pengalaman_kerja' => $this->request->getPost('tautan_pengalaman_kerja'),
             'bukti_update_sister' => $this->request->getPost('bukti_update_sister'),
             'status_validasi' => $this->request->getPost('status_validasi'),
         );

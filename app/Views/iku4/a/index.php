@@ -71,10 +71,10 @@
                           <td class="text-center"><?php echo $row['tautan_ijazah']; ?></td>
                           <td class="text-center"><?php echo $row['bukti_update_sister']; ?></td>
                           <td class="text-center">
-                            <?php if (session()->get('status_validasi') == 1) {
-                              echo ' <button class="btn btn-icon btn-success"><i class="fas fa-check"></i></button>';
-                            } else if (session()->get('status_validasi') == 0) {
-                              echo '<button class="btn btn-icon btn-danger"><i class="fas fa-times"></i></button>';
+                            <?php if ($row['status_validasi'] == 1) {
+                              echo '<button class="btn btn-icon btn-success"><i class="fas fa-fw fa-check"></i></button>';
+                            } else if ($row['status_validasi'] == 0) {
+                              echo '<button class="btn btn-icon btn-danger"><i class="fas fa-fw fa-times"></i></button>';
                             } else {
                               echo '';
                             } ?>
