@@ -9,20 +9,20 @@ class Kerja7 extends BaseController
 {
     public function __construct()
     {
-        $this->Kerja7 = new M_Kerja7();
+        $this->kerja7 = new M_Kerja7();
         helper('form', 'url');
     }
 
     public function index()
     {
-        $Kerja7 = new M_Kerja7();
-        $data['Kerja7'] = $this->Kerja7->findAll();
-        echo view('Kerja7/index', $data);
+        $kerja7 = new M_Kerja7();
+        $data['kerja7'] = $this->kerja7->findAll();
+        echo view('kerja7/index', $data);
     }
 
     public function save()
     {
-        $Kerja7 = new M_Kerja7();
+        $kerja7 = new M_Kerja7();
         $data = array(
             'id' => $this->request->getPost('id'),
             'indikator' => $this->request->getPost('indikator'),
@@ -36,20 +36,20 @@ class Kerja7 extends BaseController
             'verif_capaian' => $this->request->getPost('verif_capaian'),
             'pic' => $this->request->getPost('pic'),
         );
-        $Kerja7->save_Kerja7($data);
+        $kerja7->save_Kerja7($data);
         return redirect()->to('index');
     }
 
     public function edit($id)
     {
-        $Kerja7 = new M_Kerja7();
-        $data['Kerja7'] = $this->Kerja7->get_Kerja7($id);
-        echo view('Kerja7/edit', $data);
+        $kerja7 = new M_Kerja7();
+        $data['kerja7'] = $this->kerja7->get_Kerja7($id);
+        echo view('kerja7/edit', $data);
     }
 
     public function update($id)
     {
-        $Kerja7 = new M_Kerja7();
+        $kerja7 = new M_Kerja7();
         $data = array(
             'id' => $this->request->getPost('id'),
             'indikator' => $this->request->getPost('indikator'),
@@ -63,7 +63,7 @@ class Kerja7 extends BaseController
             'verif_capaian' => $this->request->getPost('verif_capaian'),
             'pic' => $this->request->getPost('pic'),
         );
-        $ubah = $this->Kerja7->update_Kerja7($data, $id);
+        $ubah = $this->kerja7->update_Kerja7($data, $id);
      
     // Jika berhasil melakukan ubah
         if($ubah)
@@ -71,18 +71,18 @@ class Kerja7 extends BaseController
             // Deklarasikan session flashdata dengan tipe info
             session()->setFlashdata('message', 'Updated product successfully');
             // Redirect ke halaman product
-            return redirect()->to(base_url('Kerja7')); 
+            return redirect()->to(base_url('kerja7')); 
         }
     }
 
     public function delete($id)
     {
-        $Kerja7 = new M_Kerja7();
-        $hapus = $this->Kerja7->delete_Kerja7($id);
+        $kerja7 = new M_Kerja7();
+        $hapus = $this->kerja7->delete_Kerja7($id);
         if($hapus)
         {
             session()->setFlashdata('message', 'Deleted data');
-            return redirect()->to(base_url('Kerja7'));
+            return redirect()->to(base_url('kerja7'));
         };
     }
 }
