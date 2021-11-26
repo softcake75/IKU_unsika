@@ -12,14 +12,14 @@
               <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Kertas Kerja</span></a>
                   <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="forms-advanced-form.html">1. Kesiapan Kerja Lulusan</a></li><br>
-                    <li><a class="nav-link" href="forms-editor.html">2. Mahasiswa di Luar Kampus</a></li><br>
-                    <li><a class="nav-link" href="forms-editor.html">3. Dosen di Luar Kampus</a></li><br>
-                    <li><a class="nav-link" href="forms-editor.html">4. Kualifikasi Dosen</a></li><br>
-                    <li><a class="nav-link" href="forms-editor.html">5. Penerapan Riset Dosen</a></li><br>
-                    <li><a class="nav-link" href="forms-editor.html">6. Kemitraan Program Studi</a></li><br>
-                    <li><a class="nav-link" href="forms-editor.html">7. Pembelajaran Dalam Kelas</a></li><br>
-                    <li><a class="nav-link" href="forms-editor.html">8. Akreditasi Internasional</a></li>
+                    <li><a class="nav-link" href="kerja1">1. Kesiapan Kerja Lulusan</a></li><br>
+                    <li><a class="nav-link" href="kerja2">2. Mahasiswa di Luar Kampus</a></li><br>
+                    <li><a class="nav-link" href="kerja3">3. Dosen di Luar Kampus</a></li><br>
+                    <li><a class="nav-link" href="kerja4">4. Kualifikasi Dosen</a></li><br>
+                    <li><a class="nav-link" href="kerja5">5. Penerapan Riset Dosen</a></li><br>
+                    <li><a class="nav-link" href="kerja6">6. Kemitraan Program Studi</a></li><br>
+                    <li><a class="nav-link" href="kerja7">7. Pembelajaran Dalam Kelas</a></li><br>
+                    <li><a class="nav-link" href="kerja8">8. Akreditasi Internasional</a></li>
                   </ul>
              </li>
               <li><a href="<?= base_url('/Dafop')?>" class="nav-link"><i class="far fa-file-alt"></i><span>Definisi Operational</span></a></li>

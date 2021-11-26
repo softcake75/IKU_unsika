@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/modules/jquery-selectric/selectric.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css')?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css')?>">
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">

@@ -30,11 +30,6 @@ class kerja1 extends BaseController
             'kinerja_target' => $this->request->getPost('kinerja_target'),
             'kinerja_realisasi' => $this->request->getPost('kinerja_realisasi'),
             'kinerja_capaian' => $this->request->getPost('kinerja_capaian'),
-            'ket' => $this->request->getPost('ket'),
-            'verif_taget' => $this->request->getPost('verif_taget'),
-            'verif_realisasi' => $this->request->getPost('verif_realisasi'),
-            'verif_capaian' => $this->request->getPost('verif_capaian'),
-            'pic' => $this->request->getPost('pic'),
         );
         $kerja1->save_kerja1($data);
         return redirect()->to('index');
@@ -57,11 +52,6 @@ class kerja1 extends BaseController
             'kinerja_target' => $this->request->getPost('kinerja_target'),
             'kinerja_realisasi' => $this->request->getPost('kinerja_realisasi'),
             'kinerja_capaian' => $this->request->getPost('kinerja_capaian'),
-            'ket' => $this->request->getPost('ket'),
-            'verif_taget' => $this->request->getPost('verif_taget'),
-            'verif_realisasi' => $this->request->getPost('verif_realisasi'),
-            'verif_capaian' => $this->request->getPost('verif_capaian'),
-            'pic' => $this->request->getPost('pic'),
         );
         $ubah = $this->kerja1->update_kerja1($data, $id);
      
