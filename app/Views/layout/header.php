@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css')?>">
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
