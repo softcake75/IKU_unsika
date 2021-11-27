@@ -9,49 +9,49 @@ class Dafop extends BaseController
 {
     public function __construct()
     {
-        $this->Dafop = new M_Dafop();
+        $this->dafop = new M_Dafop();
         helper('form', 'url');
     }
 
     public function index()
     {
-        $Dafop = new M_Dafop();
-        $data['dafop'] = $this->Dafop->findAll();
-        echo view('Dafop/index', $data);
+        $dafop = new M_Dafop();
+        $data['dafop'] = $this->dafop->findAll();
+        echo view('dafop/index', $data);
     }
 
     public function save()
     {
-        $Dafop = new M_Dafop();
+        $dafop = new M_Dafop();
         $data = array(
             'id' => $this->request->getPost('id'),
             'indikator' => $this->request->getPost('indikator'),
-            'defenisi' => $this->request->getPost('defenisi'),
+            'definisi' => $this->request->getPost('definisi'),
             'catatan' => $this->request->getPost('catatan'),
             'satuan' => $this->request->getPost('satuan'),
         );
-        $Dafop->save_Dafop($data);
+        $dafop->save_dafop($data);
         return redirect()->to('index');
     }
 
     public function edit($id)
     {
-        $Dafop = new M_Dafop();
-        $data['Dafop'] = $this->Dafop->get_Dafop($id);
-        echo view('Dafop/edit', $data);
+        $dafop = new M_Dafop();
+        $data['dafop'] = $this->dafop->get_dafop($id);
+        echo view('dafop/edit', $data);
     }
 
     public function update($id)
     {
-        $Dafop = new M_Dafop();
+        $dafop = new M_Dafop();
         $data = array(
             'id' => $this->request->getPost('id'),
             'indikator' => $this->request->getPost('indikator'),
-            'defenisi' => $this->request->getPost('defenisi'),
+            'definisi' => $this->request->getPost('definisi'),
             'catatan' => $this->request->getPost('catatan'),
             'satuan' => $this->request->getPost('satuan'),
         );
-        $ubah = $this->Dafop->update_Dafop($data, $id);
+        $ubah = $this->dafop->update_dafop($data, $id);
      
     // Jika berhasil melakukan ubah
         if($ubah)
@@ -59,18 +59,18 @@ class Dafop extends BaseController
             // Deklarasikan session flashdata dengan tipe info
             session()->setFlashdata('message', 'Updated product successfully');
             // Redirect ke halaman product
-            return redirect()->to(base_url('Dafop')); 
+            return redirect()->to(base_url('dafop')); 
         }
     }
 
     public function delete($id)
     {
-        $Dafop = new M_Dafop();
-        $hapus = $this->Dafop->delete_Dafop($id);
+        $dafop = new M_Dafop();
+        $hapus = $this->dafop->delete_dafop($id);
         if($hapus)
         {
             session()->setFlashdata('message', 'Deleted data');
-            return redirect()->to(base_url('Dafop'));
+            return redirect()->to(base_url('dafop'));
         };
     }
 }
