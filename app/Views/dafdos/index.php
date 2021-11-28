@@ -136,7 +136,11 @@
                 </div>
                 <div class="form-group">
                   <label>Status Kepegawaian</label>
-                  <input type="text" class="form-control" name="status_kepegawaian" placeholder="Masukan Status Kepegawaian">
+                  <select type="text" class="form-control" name="status_kepegawaian">
+                    <option value="PNS">PNS</option>
+                    <option value="Tetap Non PNS">Tetap Non PNS</option>
+                    <option value="PPPK">PPPK</option>
+                  </select>
                 </div>
                 <div class="form-group">
                   <label>Prodi Mengajar</label>
