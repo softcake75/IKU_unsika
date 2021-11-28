@@ -27,6 +27,7 @@ class iku8 extends BaseController
             'id' => $this->request->getPost('id'),
             'prodi' => $this->request->getPost('prodi'),
             'jenjang_studi' => $this->request->getPost('jenjang_studi'),
+            'fakultas' => $this->request->getPost('fakultas'),
             'status_keaktifan' => $this->request->getPost('status_keaktifan'),
             'akreditasi_internasional' => $this->request->getPost('akreditasi_internasional'),
             'lembaga_akreditasi_internasional' => $this->request->getPost('lembaga_akreditasi_internasional'),
@@ -34,14 +35,14 @@ class iku8 extends BaseController
             'tautan_bukti_pddikti' => $this->request->getPost('tautan_bukti_pddikti'),
             'status_validasi' => $this->request->getPost('status_validasi'),
         );
-        $iku8->save_iku8($data);
+        $iku8->save_iku_8($data);
         return redirect()->to('index');
     }
 
     public function edit($id)
     {
         $iku8 = new M_iku8();
-        $data['iku8'] = $this->iku8->get_iku8($id);
+        $data['iku8'] = $this->iku8->get_iku_8($id);
         echo view('iku8/edit', $data);
     }
 
@@ -52,6 +53,7 @@ class iku8 extends BaseController
             'id' => $this->request->getPost('id'),
             'prodi' => $this->request->getPost('prodi'),
             'jenjang_studi' => $this->request->getPost('jenjang_studi'),
+            'fakultas' => $this->request->getPost('fakultas'),
             'status_keaktifan' => $this->request->getPost('status_keaktifan'),
             'akreditasi_internasional' => $this->request->getPost('akreditasi_internasional'),
             'lembaga_akreditasi_internasional' => $this->request->getPost('lembaga_akreditasi_internasional'),
@@ -59,7 +61,7 @@ class iku8 extends BaseController
             'tautan_bukti_pddikti' => $this->request->getPost('tautan_bukti_pddikti'),
             'status_validasi' => $this->request->getPost('status_validasi'),
         );
-        $ubah = $this->iku8->update_iku8($data, $id);
+        $ubah = $this->iku8->update_iku_8($data, $id);
      
     // Jika berhasil melakukan ubah
         if($ubah)
@@ -74,7 +76,7 @@ class iku8 extends BaseController
     public function delete($id)
     {
         $iku8 = new M_iku8();
-        $hapus = $this->iku8->delete_iku8($id);
+        $hapus = $this->iku8->delete_iku_8($id);
         if($hapus)
         {
             session()->setFlashdata('error', 'Deleted data');
