@@ -29,8 +29,9 @@ class iku5_c extends BaseController
             'judul' => $this->request->getPost('judul'),
             'tautan_katalog' => $this->request->getPost('tautan_katalog'),
             'sertif_pameran' => $this->request->getPost('sertif_pameran'),
+            'tautan_kurasi' => $this->request->getPost('tautan_kurasi'),
             'tautan_mou' => $this->request->getPost('tautan_mou'),
-            'tautan_update_sister' => $this->request->getPost('tautan_update_sister'),
+            'bukti_update_sister' => $this->request->getPost('bukti_update_sister'),
             'status_validasi' => $this->request->getPost('status_validasi'),
         );
         $iku5_c->save_iku5_c($data);
@@ -53,15 +54,9 @@ class iku5_c extends BaseController
             'judul' => $this->request->getPost('judul'),
             'tautan_katalog' => $this->request->getPost('tautan_katalog'),
             'sertif_pameran' => $this->request->getPost('sertif_pameran'),
+            'tautan_kurasi' => $this->request->getPost('tautan_kurasi'),
             'tautan_mou' => $this->request->getPost('tautan_mou'),
-            'tautan_update_sister' => $this->request->getPost('tautan_update_sister'),
-            'status_validasi' => $this->request->getPost('status_validasi'),'id' => $this->request->getPost('id'),
-            'jenis_karya' => $this->request->getPost('jenis_karya'),
-            'judul' => $this->request->getPost('judul'),
-            'tautan_katalog' => $this->request->getPost('tautan_katalog'),
-            'sertif_pameran' => $this->request->getPost('sertif_pameran'),
-            'tautan_mou' => $this->request->getPost('tautan_mou'),
-            'tautan_update_sister' => $this->request->getPost('tautan_update_sister'),
+            'bukti_update_sister' => $this->request->getPost('bukti_update_sister'),
             'status_validasi' => $this->request->getPost('status_validasi'),
         );
         $ubah = $this->iku5_c->update_iku5_c($data, $id);
