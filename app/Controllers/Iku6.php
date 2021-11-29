@@ -41,14 +41,14 @@ class iku6 extends BaseController
             'jumlah_luaran' => $this->request->getPost('jumlah_luaran'),
             'status_validasi' => $this->request->getPost('status_validasi'),
         );
-        $iku6->save_iku6($data);
+        $iku6->save_iku_6($data);
         return redirect()->to('index');
     }
 
     public function edit($id)
     {
         $iku6 = new M_iku6();
-        $data['iku6'] = $this->iku6->get_iku6($id);
+        $data['iku6'] = $this->iku6->get_iku_6($id);
         echo view('iku6/edit', $data);
     }
 
@@ -73,7 +73,7 @@ class iku6 extends BaseController
             'jumlah_luaran' => $this->request->getPost('jumlah_luaran'),
             'status_validasi' => $this->request->getPost('status_validasi'),
         );
-        $ubah = $this->iku6->update_iku6($data, $id);
+        $ubah = $this->iku6->update_iku_6($data, $id);
      
     // Jika berhasil melakukan ubah
         if($ubah)
@@ -88,7 +88,7 @@ class iku6 extends BaseController
     public function delete($id)
     {
         $iku6 = new M_iku6();
-        $hapus = $this->iku6->delete_iku6($id);
+        $hapus = $this->iku6->delete_iku_6($id);
         if($hapus)
         {
             session()->setFlashdata('error', 'Deleted data');
