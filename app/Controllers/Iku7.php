@@ -25,26 +25,26 @@ class iku7 extends BaseController
         $iku7 = new M_iku7();
         $data = array(
             'id' => $this->request->getPost('id'),
-            'mata_kuliah' => $this->request->getPost('mata_kuliah'),
-            'jml_sks' => $this->request->getPost('jml_sks'),
+            'nama_matkul' => $this->request->getPost('nama_matkul'),
+            'sks' => $this->request->getPost('sks'),
             'prodi' => $this->request->getPost('prodi'),
-            'jenjang_studi' => $this->request->getPost('jenjang_studi'),
+            'jenjang' => $this->request->getPost('jenjang'),
             'jenis_matkul' => $this->request->getPost('jenis_matkul'),
             'jenis_pembelajaran' => $this->request->getPost('jenis_pembelajaran'),
-            'formula' => $this->request->getPost('formula'),
+            'formula_penilaian' => $this->request->getPost('formula_penilaian'),
             'tautan_rps' => $this->request->getPost('tautan_rps'),
             'tautan_laporan' => $this->request->getPost('tautan_laporan'),
-            'tautan_bukti_pddikti' => $this->request->getPost('tautan_bukti_pddikti'),
+            'bukti_pddikti' => $this->request->getPost('bukti_pddikti'),
             'status_validasi' => $this->request->getPost('status_validasi'),
         );
-        $iku7->save_iku7($data);
+        $iku7->save_iku_7($data);
         return redirect()->to('index');
     }
 
     public function edit($id)
     {
         $iku7 = new M_iku7();
-        $data['iku7'] = $this->iku7->get_iku7($id);
+        $data['iku7'] = $this->iku7->get_iku_7($id);
         echo view('iku7/edit', $data);
     }
 
@@ -53,19 +53,19 @@ class iku7 extends BaseController
         $iku7 = new M_iku7();
         $data = array(
             'id' => $this->request->getPost('id'),
-            'mata_kuliah' => $this->request->getPost('mata_kuliah'),
-            'jml_sks' => $this->request->getPost('jml_sks'),
+            'nama_matkul' => $this->request->getPost('nama_matkul'),
+            'sks' => $this->request->getPost('sks'),
             'prodi' => $this->request->getPost('prodi'),
-            'jenjang_studi' => $this->request->getPost('jenjang_studi'),
+            'jenjang' => $this->request->getPost('jenjang'),
             'jenis_matkul' => $this->request->getPost('jenis_matkul'),
             'jenis_pembelajaran' => $this->request->getPost('jenis_pembelajaran'),
-            'formula' => $this->request->getPost('formula'),
+            'formula_penilaian' => $this->request->getPost('formula_penilaian'),
             'tautan_rps' => $this->request->getPost('tautan_rps'),
             'tautan_laporan' => $this->request->getPost('tautan_laporan'),
-            'tautan_bukti_pddikti' => $this->request->getPost('tautan_bukti_pddikti'),
+            'bukti_pddikti' => $this->request->getPost('bukti_pddikti'),
             'status_validasi' => $this->request->getPost('status_validasi'),
         );
-        $ubah = $this->iku7->update_iku7($data, $id);
+        $ubah = $this->iku7->update_iku_7($data, $id);
      
     // Jika berhasil melakukan ubah
         if($ubah)
@@ -80,7 +80,7 @@ class iku7 extends BaseController
     public function delete($id)
     {
         $iku7 = new M_iku7();
-        $hapus = $this->iku7->delete_iku7($id);
+        $hapus = $this->iku7->delete_iku_7($id);
         if($hapus)
         {
             session()->setFlashdata('error', 'Deleted data');
