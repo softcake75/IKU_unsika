@@ -31,7 +31,7 @@ class iku3_b extends BaseController
             'tahun_kegiatan' => $this->request->getPost('tahun_kegiatan'),
             'tautan_dukung_data' => $this->request->getPost('tautan_dukung_data'),
             'tautan_sk' => $this->request->getPost('tautan_sk'),
-            'bukti_update_sister' => $this->request->getPost('bukti_update_sister'),
+            'tautan_update_sister' => $this->request->getPost('tautan_update_sister'),
             'tautan_bukti_pddikti' => $this->request->getPost('tautan_bukti_pddikti'),
             'status_validasi' => $this->request->getPost('status_validasi'),
         );
@@ -43,7 +43,7 @@ class iku3_b extends BaseController
     {
         $iku3_b = new M_iku3_b();
         $data['iku3_b'] = $this->iku3_b->get_iku3_b($id);
-        echo view('iku3_b/edit', $data);
+        echo view('iku3/b/edit', $data);
     }
 
     public function update($id)
@@ -57,7 +57,7 @@ class iku3_b extends BaseController
             'tahun_kegiatan' => $this->request->getPost('tahun_kegiatan'),
             'tautan_dukung_data' => $this->request->getPost('tautan_dukung_data'),
             'tautan_sk' => $this->request->getPost('tautan_sk'),
-            'bukti_update_sister' => $this->request->getPost('bukti_update_sister'),
+            'tautan_update_sister' => $this->request->getPost('tautan_update_sister'),
             'tautan_bukti_pddikti' => $this->request->getPost('tautan_bukti_pddikti'),
             'status_validasi' => $this->request->getPost('status_validasi'),
         );

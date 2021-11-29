@@ -60,7 +60,7 @@
           <div class="form-group row mb-4">
             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bukti Update Sister</label>
             <div class="col-sm-12 col-md-7">
-              <input type="text" class="form-control" name="bukti_update_sister" value="<?php echo $iku3_b['bukti_update_sister']; ?>">
+              <input type="text" class="form-control" name="tautan_update_sister" value="<?php echo $iku3_b['tautan_update_sister']; ?>">
             </div>
           </div>
           <div class="form-group row mb-4">

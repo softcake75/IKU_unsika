@@ -47,7 +47,7 @@ class Iku2_b extends BaseController
     {
         $iku2_b = new M_iku2_b();
         $data['iku_2_b'] = $this->iku2_b->get_iku2_b($id);
-        echo view('iku2_b/edit', $data);
+        echo view('iku2/b/edit', $data);
     }
 
     public function update($id)

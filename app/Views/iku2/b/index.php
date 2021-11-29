@@ -40,7 +40,6 @@
           </div>
         <?php endif; ?>
         <div class="table-responsive">
-          <!-- <table class="table table-striped" id="table-1"> -->
           <table id="mydata" class="table  table-bordered table-md" style="width:100%">
             <thead>
               <tr>
@@ -80,7 +79,7 @@
                   <td class="text-center"><?php echo $row['dospem']; ?></td>
                   <td class="text-center"><?php echo $row['sk_dospem']; ?></td>
                   <td class="text-center"><?php echo $row['tautan_sertif']; ?></td>
-                  <td class="text-center"><?php echo $row['tautan_bukti_pddikti']; ?></td>
+                  <td class="text-center"><?php echo $row['bukti_pddikti']; ?></td>
                   <td class="text-center">
                     <?php if ($row['status_validasi'] == 1) {
                       echo ' <button class="btn btn-icon btn-success"><i class="fas fa-fw fa-check"></i></button>';
@@ -169,7 +168,7 @@
                 </div>
                 <div class="form-group">
                   <label>Tautan Bukti Isian di PDDIKTI </label>
-                  <input type="text" class="form-control" name="tautan_bukti_pddikti" placeholder="Masukan Tautan Bukti PDDIKTI">
+                  <input type="text" class="form-control" name="bukti_pddikti" placeholder="Masukan Tautan Bukti PDDIKTI">
                 </div>
                 <div class="form-group">
                   <label>Status Validasi</label><br>
@@ -206,7 +205,7 @@
           display: $.fn.dataTable.Responsive.display.modal({
             header: function(row) {
               var data = row.data();
-              return 'Details for ' + data[0] + ' ' + data[2];
+              return 'Details for ' + data[3]
             }
           }),
           renderer: $.fn.dataTable.Responsive.renderer.tableAll({

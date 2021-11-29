@@ -53,7 +53,7 @@
                         </th>
                         <th class="text-center">Jenis Pengalaman</th>
                         <th class="text-center">Nama</th>
-                        <th class="text-center">Nama Perusahaan/Lembaga/Institusi/Organisasi/BUMN/BUMD</th>
+                        <th class="text-center">Nama Perusahaan/Lembaga</th>
                         <th class="text-center">Tautan Bukti Pengalaman Kerja</th>
                         <th class="text-center">Bukti Update Sister</th>
                         <th class="text-center">Status Validasi</th>
@@ -168,7 +168,21 @@
 
 <script>
   $(document).ready(function() {
-    $('#mydata').DataTable();
+    $('#mydata').DataTable({
+      responsive: {
+        details: {
+          display: $.fn.dataTable.Responsive.display.modal({
+            header: function(row) {
+              var data = row.data();
+              return 'Details for ' + data[2]
+            }
+          }),
+          renderer: $.fn.dataTable.Responsive.renderer.tableAll({
+            tableClass: 'table'
+          })
+        }
+      }
+    });
   });
 </script>
 
@@ -212,3 +226,4 @@
       }
     });
   });
+</script>

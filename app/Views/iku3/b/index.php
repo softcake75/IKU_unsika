@@ -70,7 +70,7 @@
                   <td class="text-center"><?php echo $row['tahun_kegiatan']; ?></td>
                   <td class="text-center"><?php echo $row['tautan_dukung_data']; ?></td>
                   <td class="text-center"><?php echo $row['tautan_sk']; ?></td>
-                  <td class="text-center"><?php echo $row['bukti_update_sister']; ?></td>
+                  <td class="text-center"><?php echo $row['tautan_update_sister']; ?></td>
                   <td class="text-center"><?php echo $row['tautan_bukti_pddikti']; ?></td>
                   <td class="text-center">
                     <?php if ($row['status_validasi'] == 1) {
@@ -113,6 +113,10 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-group">
+                  <label>Kritria Pengalaman</label>
+                  <input type="text" class="form-control" name="kriteria_pengalaman" placeholder="Masukan Kriteria Pengalaman">
+                </div>
+                <div class="form-group">
                   <label>Jenis PT</label>
                   <select type="text" class="form-control" name="jenis_pt" placeholder="Masukan Jenis">
                     <option value="Perusahaan Multinasional">Perusahaan Multinasional</option>
@@ -149,7 +153,7 @@
                 </div>
                 <div class="form-group">
                   <label>Bukti Update Sister</label>
-                  <input type="text" class="form-control" name="bukti_update_sister" placeholder="Masukan Bukti Update Sister">
+                  <input type="text" class="form-control" name="tautan_update_sister" placeholder="Masukan Bukti Update Sister">
                 </div>
                 <div class="form-group">
                   <label>Tautan Bukti PDDIKTI</label>
@@ -191,7 +195,7 @@
           display: $.fn.dataTable.Responsive.display.modal({
             header: function(row) {
               var data = row.data();
-              return 'Details for ' + data[0] + ' ' + data[2];
+              return 'Details for ' + data[2]
             }
           }),
           renderer: $.fn.dataTable.Responsive.renderer.tableAll({

@@ -28,10 +28,10 @@ class iku3_c extends BaseController
             'nama' => $this->request->getPost('nama'),
             'nama_mahasiswa' => $this->request->getPost('nama_mahasiswa'),
             'nama_kompetisi' => $this->request->getPost('nama_kompetisi'),
-            'tingkat_kopetisi' => $this->request->getPost('tingkat_kopetisi'),
+            'tingkat_kompetisi' => $this->request->getPost('tingkat_kompetisi'),
             'tautan_data_dukung' => $this->request->getPost('tautan_data_dukung'),
             'tautan_sk' => $this->request->getPost('tautan_sk'),
-            'bukti_prestasi_nahasiswa' => $this->request->getPost('bukti_prestasi_nahasiswa'),
+            'bukti_prestasi_mahasiswa' => $this->request->getPost('bukti_prestasi_mahasiswa'),
             'status_validasi' => $this->request->getPost('status_validasi'),
         );
         $iku3_c->save_iku3_c($data);
@@ -42,7 +42,7 @@ class iku3_c extends BaseController
     {
         $iku3_c = new M_iku3_c();
         $data['iku3_c'] = $this->iku3_c->get_iku3_c($id);
-        echo view('iku3_c/edit', $data);
+        echo view('iku3/c/edit', $data);
     }
 
     public function update($id)
@@ -53,7 +53,7 @@ class iku3_c extends BaseController
             'nama' => $this->request->getPost('nama'),
             'nama_mahasiswa' => $this->request->getPost('nama_mahasiswa'),
             'nama_kompetisi' => $this->request->getPost('nama_kompetisi'),
-            'tingkat_kopetisi' => $this->request->getPost('tingkat_kopetisi'),
+            'tingkat_kompetisi' => $this->request->getPost('tingkat_kompetisi'),
             'tautan_data_dukung' => $this->request->getPost('tautan_data_dukung'),
             'tautan_sk' => $this->request->getPost('tautan_sk'),
             'bukti_prestasi_mahasiswa' => $this->request->getPost('bukti_prestasi_mahasiswa'),

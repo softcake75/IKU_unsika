@@ -87,10 +87,14 @@
           <div class="form-group row mb-4">
             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Status Validasi</label>
             <div class="col-sm-12 col-md-7">
-              <input name="status_validasi" type="text" class="form-control" value="<?php echo $iku_2_b['status_validasi']; ?>">
-              <option value="1">Ya</option>
-              <option value="0">Tidak</option>
-              </select>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="ya" name="status_validasi" value="1" class="custom-control-input" <?php if ($iku_2_b['status_validasi'] == '1') echo 'checked' ?>>
+                <label class="custom-control-label" for="ya">Ya</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="tidak" name="status_validasi" value="0" class="custom-control-input" <?php if ($iku_2_b['status_validasi'] == '0') echo 'checked' ?>>
+                <label class="custom-control-label" for="tidak">Tidak</label>
+              </div>
             </div>
           </div>
 

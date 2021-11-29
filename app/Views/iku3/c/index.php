@@ -67,7 +67,7 @@
                   <td class="text-center"><?php echo $row['nama_mahasiswa']; ?></td>
                   <td class="text-center"><?php echo $row['nama_kompetisi']; ?></td>
                   <td class="text-center"><?php echo $row['tingkat_kompetisi']; ?></td>
-                  <td class="text-center"><?php echo $row['tautan_dukung_data']; ?></td>
+                  <td class="text-center"><?php echo $row['tautan_data_dukung']; ?></td>
                   <td class="text-center"><?php echo $row['tautan_sk']; ?></td>
                   <td class="text-center"><?php echo $row['bukti_prestasi_mahasiswa']; ?></td>
                   <td class="text-center">
@@ -82,7 +82,7 @@
                   <td class="text-center">
                     <div class="btn-group">
                       <a href="<?php echo base_url('/iku3_c/edit/' . $row['id']); ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
-                      <a href="<?php echo base_url('/iku2_a/delete/' . $row['id']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus <?php echo $row['nama']; ?>?')"><i class="fas fa-trash-alt"></i></a>
+                      <a href="<?php echo base_url('/iku3_c/delete/' . $row['id']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus <?php echo $row['nama']; ?>?')"><i class="fas fa-trash-alt"></i></a>
                     </div>
                   </td>
                 </tr>
@@ -130,7 +130,7 @@
               <div class="col-lg-6">
                 <div class="form-group">
                   <label>Tautan Data Dukung</label>
-                  <input type="text" class="form-control" name="tautan_dukung_data" placeholder="Masukan Tautan Data Dukung">
+                  <input type="text" class="form-control" name="tautan_data_dukung" placeholder="Masukan Tautan Data Dukung">
                 </div>
                 <div class="form-group">
                   <label>Tautan Surat Keterangan Mahasiswa Berprestasi</label>

@@ -24,10 +24,10 @@
           <div class="form-group row mb-4">
             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jenis Kegiatan</label>
             <div class="col-sm-12 col-md-7">
-              <select name="jenis_pt" type="text" class="form-control">
-                <option value="Pendidikan" <?php if ($iku3_a['jenis_pt'] == 'Pendidikan') echo 'selected' ?>>Pendidikan</option>
-                <option value="Penelitian" <?php if ($iku3_a['jenis_pt'] == 'Penelitian') echo 'selected' ?>>Penelitian</option>
-                <option value="Pengabdian kepada Masyarakat" <?php if ($iku3_a['jenis_pt'] == 'Pengabdian kepada Masyarakat') echo 'selected' ?>>Pengabdian kepada Masyarakat</option>
+              <select name="jenis_kegiatan" type="text" class="form-control">
+                <option value="Pendidikan" <?php if ($iku3_a['jenis_kegiatan'] == 'Pendidikan') echo 'selected' ?>>Pendidikan</option>
+                <option value="Penelitian" <?php if ($iku3_a['jenis_kegiatan'] == 'Penelitian') echo 'selected' ?>>Penelitian</option>
+                <option value="Pengabdian kepada Masyarakat" <?php if ($iku3_a['jenis_kegiatan'] == 'Pengabdian kepada Masyarakat') echo 'selected' ?>>Pengabdian kepada Masyarakat</option>
               </select>
             </div>
           </div>

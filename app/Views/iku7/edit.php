@@ -15,13 +15,13 @@
           <div class="form-group row mb-4">
             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Mata Kuliah</label>
             <div class="col-sm-12 col-md-7">
-              <input type="text" class="form-control" name="prodi" value="<?php echo $iku7['nama_matkul']; ?>">
+              <input type="text" class="form-control" name="nama_matkul" value="<?php echo $iku7['nama_matkul']; ?>">
             </div>
           </div>
           <div class="form-group row mb-4">
             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jumlah SKS</label>
             <div class="col-sm-12 col-md-7">
-              <input type="text" class="form-control" name="prodi" value="<?php echo $iku7['sks']; ?>">
+              <input type="text" class="form-control" name="sks" value="<?php echo $iku7['sks']; ?>">
             </div>
           </div>
           <div class="form-group row mb-4">

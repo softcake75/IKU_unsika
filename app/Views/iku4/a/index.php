@@ -157,6 +157,27 @@
 <?php echo view('layout/footer') ?>
 
 
+<script>
+  $(document).ready(function() {
+    $('#mydata').DataTable({
+      responsive: {
+        details: {
+          display: $.fn.dataTable.Responsive.display.modal({
+            header: function(row) {
+              var data = row.data();
+              return 'Details for ' + data[1]
+            }
+          }),
+          renderer: $.fn.dataTable.Responsive.renderer.tableAll({
+            tableClass: 'table'
+          })
+        }
+      }
+    });
+  });
+</script>
+
+
 <script type="text/javascript" language="javascript">
   $(document).ready(function() {
     var dataTable = $('#tabel_serverside').DataTable({
